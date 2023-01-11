@@ -8,6 +8,7 @@ const cors = require('cors')
 
 app.use(cors({
     origin: "http://localhost:3000",
+    method: ["GET", "POST", "DELETE", "PATCH"],
 }))
 
 //express.json helps parse json files
