@@ -4,7 +4,11 @@ const mongoose = require('mongoose')
 const userroutes = require('./routes/users')
 const app = express()
 const mongdb = process.env.MongoURI
+const cors = require('cors')
 
+app.use(cors({
+    origin: "http://localhost:3000",
+}))
 
 //express.json helps parse json files
 app.use(express.json())
