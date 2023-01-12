@@ -6,7 +6,7 @@ import Contact from './features/contact';
 import Error from './features/error';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
-
+import Home from './features/home';
 
 const App=() => {
   return (
@@ -14,10 +14,11 @@ const App=() => {
       <BrowserRouter>
 
         <Routes>
-          <Route path='/' element={<Signup />} />
+          <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path="/page-not-found" element={<Error />} />
+          <Route path="/signup" element={<Signup />} />
 
 
         </Routes>

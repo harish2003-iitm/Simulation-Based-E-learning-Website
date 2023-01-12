@@ -11,16 +11,13 @@ const Header = () => {
 
       <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><NavLink to="/about" className="nav-link px-2 link-secondary">About</NavLink></li>
-        <li><NavLink to="/contact" className="nav-link px-2 link-dark">Features</NavLink></li>
-        <li><NavLink to="/" className="nav-link px-2 link-dark">Signup</NavLink></li>
-        <li><NavLink to="/" className="nav-link px-2 link-dark">FAQs</NavLink></li>
+        <li><NavLink to="/contact" className="nav-link px-2 link-dark">Contact</NavLink></li>
+        <li><NavLink to="/signup" className="nav-link px-2 link-dark">Signup</NavLink></li>
+        <li><NavLink to="/" className="nav-link px-2 link-dark">Home</NavLink></li>
         <li><NavLink to="/login" className="nav-link px-2 link-dark">login</NavLink></li>
       </ul>
 
-      <div className="col-md-3 text-end">
-        <button type="button" className="btn btn-outline-primary me-2">Login</button>
-        <button type="button" className="btn btn-primary">Sign-up</button>
-      </div>
+      
     </header>
 
   )
