@@ -10,11 +10,13 @@ const Header = () => {
       </Link>
 
       <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><NavLink to="/about" className="nav-link px-2 link-secondary">About</NavLink></li>
-        <li><NavLink to="/contact" className="nav-link px-2 link-dark">Contact</NavLink></li>
-        <li><NavLink to="/signup" className="nav-link px-2 link-dark">Signup</NavLink></li>
         <li><NavLink to="/" className="nav-link px-2 link-dark">Home</NavLink></li>
-        <li><NavLink to="/login" className="nav-link px-2 link-dark">login</NavLink></li>
+        <li><NavLink to="/courses" className="nav-link px-2 link-dark">Courses</NavLink></li>
+        <li><NavLink to="/about" className="nav-link px-2 link-dark">About</NavLink></li>
+        <li><NavLink to="/contact" className="nav-link px-2 link-dark">Contact</NavLink></li>
+        <li><NavLink to="/login" className="nav-link px-2 link-dark">Login</NavLink></li>
+        <li><NavLink to="/signup" className="nav-link px-2 link-dark">Signup</NavLink></li>
+        
       </ul>
 
       

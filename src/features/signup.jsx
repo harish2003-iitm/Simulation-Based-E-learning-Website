@@ -36,13 +36,13 @@ const Signup = () => {
   event.preventDefault();
   debugger
 if(Givevaluepass === ''){
-  passwordErrorHandler('password is required');
+  passwordErrorHandler('Password is required');
   
 }else{
   passwordErrorHandler('');
 }
 if(Givevalueuser === ''){
-  emailErrorHandler('email ID is required');
+  emailErrorHandler('Email ID is required');
   
 }else{
   emailErrorHandler('');

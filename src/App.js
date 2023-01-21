@@ -4,6 +4,7 @@ import Signup from './features/signup';
 import About from './features/about';
 import Contact from './features/contact';
 import Error from './features/error';
+import Courses from './features/courses';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Home from './features/home';
@@ -19,6 +20,7 @@ const App=() => {
           <Route path='/contact' element={<Contact />} />
           <Route path="/page-not-found" element={<Error />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/courses" element={<Courses />} />
 
 
         </Routes>
