@@ -1,0 +1,41 @@
+.homes {
+    overflow: hidden;
+    clear: both;
+    background-image: url(https://as2.ftcdn.net/v2/jpg/03/56/92/53/1000_F_356925367_JD6g9rbUPfWCmc3c8qQSc16ktFTo2iTC.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.h1StyleH {
+    color: beige;
+    font-family: 'Roboto';
+    padding: 20px;
+    font-size: 50px
+}
+.logoprime {
+    width: 650px;
+    float: right;
+    padding: 40px;
+}
+.divstyleH1 {
+    float:right;
+    width:50%
+}
+.divstyleH2 {
+    float: left;
+    width: 50%;
+}
+.PstyleH {
+    font-size: 80px;
+    color: white;
+    font-family:sans-serif;
+}
+.btnstuff {
+    text-align: center;
+}
+.btnH {
+    font-size: 35px;
+    background-color:fuchsia;
+    color:white;
+    border:none;
+    border-radius: 10px;
+}

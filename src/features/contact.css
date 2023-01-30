@@ -1,0 +1,57 @@
+.divStyleA {
+    background-image: url(https://img.freepik.com/free-photo/contact-us-communication-support-service-assistance-concept_53876-128103.jpg?w=1380&t=st=1674826827~exp=1674827427~hmac=0feb3775eeac45453c5761c609ff1f4fcd6f8d0630fd43399536c0f2c47c031b);
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+.h1styleA {
+    color: beige;
+    font-family: 'Roboto';
+    padding: 20px;
+    font-size: 50px
+  }
+.socialsStyle {
+    color: cyan;
+    font-size: 40px;
+    float: right
+    
+  }
+  
+.h2styleA {
+    color:white;
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0 0 0
+  }
+.h2styleB {
+    color: #fff44f;
+    font-family: 'Times New Roman';
+    font-size: 30px;
+    float: right;
+    margin-right: 500px;
+    padding: 30px
+  }
+.pstyle1 {
+    color: white;
+    font-size: 20px
+  }
+.listyle {
+    margin: 16px;
+    color: white;
+    font-size: 20px
+  }
+.divStyleB {
+    float: left
+  }
+.divStyleC {
+    float: right
+  }
+.aStyle {
+    color: lime
+    
+  }
+.aStyle2 {
+    color: lemonchiffon;
+    padding: 40px;
+    font-size: 20px
+  }

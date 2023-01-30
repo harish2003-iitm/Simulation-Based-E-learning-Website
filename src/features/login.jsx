@@ -7,10 +7,7 @@ import Footer from '../component/footer';
 import './signup.css';
 import logo from './edusim-low-resolution-color-logo (1).png';
 
-
-
-
-const Signup = () => {
+const Login = () => {
 
   
   
@@ -23,7 +20,7 @@ const Signup = () => {
   const postrequest= async ()=>{
     const post={email:Givevalueuser,password:Givevaluepass};
 
-    return await axios.post('http://localhost:4000/api/user/signup/',
+    return await axios.post('http://localhost:4000/api/user/login/',
       post
   );
       
@@ -31,15 +28,15 @@ const Signup = () => {
  
   const submithandler=(event)=>{
   event.preventDefault();
-  debugger
+  
 if(Givevaluepass === ''){
-  passwordErrorHandler('Password is required');
+  passwordErrorHandler('password is required');
   
 }else{
   passwordErrorHandler('');
 }
 if(Givevalueuser === ''){
-  emailErrorHandler('Email ID is required');
+  emailErrorHandler('email ID is required');
   
 }else{
   emailErrorHandler('');
@@ -51,26 +48,24 @@ if(Givevalueuser === ''){
    signUPDetails.then((response)=>{
    const {data}=response;
    const {token}=data;
-   //console.log("durgesh error",error)
+   console.log(token)
+   
    if (token){
     navigateToHome('/');
    }
-  //  if (token) {
-
-     
-  //    setErrorhandler("Please check the validity of your email and password");
-  //    console.log("abcde",errorhandler);
-
-  //  }
+  
    
 
     
   
 })
+// debugger
+// signUPDetails.catch((error)=>{return
+//     console.log(error)})
 
   
 
-   console.log("abc",signUPDetails);
+//    console.log("abcdef",signUPDetails);
   
 
   
@@ -96,9 +91,7 @@ if(Givevalueuser === ''){
 
 
   return (
-    
     <>
-    
     <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom head-color">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <Link to="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
@@ -109,7 +102,7 @@ if(Givevalueuser === ''){
         <li><NavLink to="/" className="nav-link px-2 link-light">Home</NavLink></li>
         <li><NavLink to="/about" className="nav-link px-2 link-light">About</NavLink></li>
         <li><NavLink to="/contact" className="nav-link px-2 link-light">Contact</NavLink></li>
-        <li><NavLink to="/login" className="nav-link px-2 link-light">Login</NavLink></li>
+        <li><NavLink to="/signup" className="nav-link px-2 link-light">Signup</NavLink></li>
         
       </ul>
 
@@ -118,7 +111,7 @@ if(Givevalueuser === ''){
     <main className="page">
       <div className='divStyle1'>
       <form className='forminp' onSubmit={submithandler} >
-        <h1 className='h1Style'>SIGNUP</h1>
+        <h1 className='h1Style'>LOGIN</h1>
         <br></br>
         <div className="mb-3">
           <label for="username" className='labStyle'>USERNAME:</label>
@@ -130,7 +123,7 @@ if(Givevalueuser === ''){
           <label for="password" className='labStyle'>PASSWORD:</label>
           <input type="text" id="password" className="form-control"  placeholder="Enter password" value={Givevaluepass} onChange={passhandler} />
           {passwordError&& <div className='alert alert-danger erralert'>{passwordError}</div>}
-          <a href='http://localhost:3000/login' className='User-red'>Already Registered?</a>
+          <a href='http://localhost:3000/signup' className='User-red'>New User?</a>
         </div><br></br>
         <button type="button" className="btn btn-primary btnStyle" onClick={submithandler} >Submit</button>
       </form>
@@ -138,10 +131,13 @@ if(Givevalueuser === ''){
     </main>
     <Footer/>
     
-    </>
+    
+  
+
+  </>
     
     
     )
 }
 
-export default Signup;
+export default Login;

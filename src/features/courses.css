@@ -1,10 +1,11 @@
 .txt {
     font-size: 20px;
     font-family: 'Times New Roman';
+    color: azure;
 }
 
 h2 {
-    color: brown;
+    color:darkorange;
 }
 
 p {
@@ -12,6 +13,19 @@ p {
     float: left;
     padding: 20px;
     
+  }
+.courses {
+    overflow: hidden;
+    clear: both;
+    background-image: url(https://img.freepik.com/premium-vector/abstract-technology-background-science-connecting-technology_42705-96.jpg?w=1060); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.coreact {
+    color: beige;
+    font-family: 'Roboto';
+    padding: 20px;
+    font-size: 50px
   }
 
 

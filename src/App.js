@@ -8,10 +8,11 @@ import Courses from './features/courses';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Home from './features/home';
+import Login from './features/login';
 
 const App=() => {
   return (
-    <main className='container'>
+    <main className='container-fluid main-css'>
       <BrowserRouter>
 
         <Routes>
@@ -21,6 +22,7 @@ const App=() => {
           <Route path="/page-not-found" element={<Error />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/login" element={<Login />} />
 
 
         </Routes>

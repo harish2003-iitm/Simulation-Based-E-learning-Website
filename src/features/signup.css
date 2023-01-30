@@ -1,0 +1,39 @@
+.erralert.alert {
+    --bs-alert-padding-x: 0.3rem !important;
+    --bs-alert-padding-y: 0.3rem !important;
+}
+.forminp {
+  padding: 50px;
+  border: 2px solid white;
+  width: 500px;
+  height: 500px;
+  background-image: url(https://cdn1.vogel.de/q9OlbLDPYhYjjrG10U4jrBe9Bqg=/fit-in/1000x0/p7i.vogel.de/wcms/ee/55/ee555de95124d8ee007ab43118af46b4/0106019265.jpeg);
+}
+
+.h1Style {
+    text-align: center;
+    color: white;
+}
+.divStyle1 {
+    flex: 0 0 auto;
+  width: 50%;
+  padding-left: 520px;
+}
+.labStyle {
+    color: white;
+}
+.btnStyle {
+    margin-left: 38%;
+  font-size: 20px;
+}
+.head-color {
+    margin-bottom: 0.5rem !important;
+    background-color: #1f3e53;
+}
+.User-red {
+  color: beige;
+}
+.logo1 {
+  width: 120px;
+  margin-right: 120px;
+}

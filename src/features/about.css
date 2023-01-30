@@ -1,0 +1,47 @@
+.h1styleX {
+    color: beige;
+    font-family: 'Roboto';
+    padding: 20px;
+    font-size: 50px
+  }
+.divStyleX {
+    background-image: url(https://img.freepik.com/free-vector/geometric-science-education-background-vector-gradient-blue-digital-remix_53876-125993.jpg);
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+.h2StyleX {
+    color: white;
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0 0 0;
+    font-style: italic
+    
+  }
+.imgStyleX {
+    object-position: left;
+    width: 600px;
+    height: 300px;
+    padding: 20px
+  }
+.divstyleX1 {
+    float: right;
+    width: 50%;
+    color: azure;
+    padding: 50px;
+    font-size: 25px
+  }
+.imgStyleY {
+    float: right;
+    width: 600px;
+    height: 300px;
+    padding: 20px
+  }
+.divstyleX2 {
+    float: left;
+    width: 50%;
+    color: burlywood;
+    padding: 50px;
+    font-size: 25px;
+    font-family: 'Times New Roman'
+  }
