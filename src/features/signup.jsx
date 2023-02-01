@@ -31,7 +31,7 @@ const Signup = () => {
  
   const submithandler=(event)=>{
   event.preventDefault();
-  debugger
+  
 if(Givevaluepass === ''){
   passwordErrorHandler('Password is required');
   
