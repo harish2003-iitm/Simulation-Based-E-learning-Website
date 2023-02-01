@@ -23,9 +23,24 @@ const Signup = () => {
   const postrequest= async ()=>{
     const post={email:Givevalueuser,password:Givevaluepass};
 
-    return await axios.post('http://localhost:4000/api/user/signup/',
-      post
-  );
+    return await fetch('http://localhost:4000/api/user/signup/',{method:'POST',body:JSON.stringify(post),headers: {
+      'Content-Type': 'application/json'
+  
+    },})
+    .then((res)=>{
+      console.log(res)
+        })
+        .catch((e)=>{
+          alert(e)
+          window.location.reload()
+          console.log(e)
+        })
+//     axios.post('http://localhost:4000/api/user/signup/',{
+//       body:post
+//     }
+//       // post
+//   )
+
       
   }
  
