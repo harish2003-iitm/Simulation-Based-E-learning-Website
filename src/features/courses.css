@@ -27,6 +27,9 @@ p {
     padding: 20px;
     font-size: 50px
   }
+.page{
+    min-height: 740px;
+}
 
 
 
