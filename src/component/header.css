@@ -5,4 +5,9 @@
 
 .logo {
     width: 120px;
+    margin-left: 1em;
+}
+
+#header-elements{
+    font-size: larger;
 }
