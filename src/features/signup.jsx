@@ -96,18 +96,16 @@ if(Givevalueuser === ''){
   return (
     
     <>
-    
     <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom head-color">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <Link to="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg className="bi me-2" width="40" height="32" role="img"></svg>
+        <img src={logo} alt='logo lessgo' className= 'logo1'></img>
       </Link>
-      <img src={logo} alt='logo lessgo' className= 'logo1'></img>
       <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><NavLink to="/" className="nav-link px-2 link-light">Home</NavLink></li>
-        <li><NavLink to="/about" className="nav-link px-2 link-light">About</NavLink></li>
-        <li><NavLink to="/contact" className="nav-link px-2 link-light">Contact</NavLink></li>
-        <li><NavLink to="/login" className="nav-link px-2 link-light">Login</NavLink></li>
+        <li><NavLink to="/" className="nav-link px-2 link-light" id="header-elements">Home</NavLink></li>
+        <li><NavLink to="/about" className="nav-link px-2 link-light" id="header-elements">About</NavLink></li>
+        <li><NavLink to="/contact" className="nav-link px-2 link-light" id="header-elements">Contact</NavLink></li>
+        <li><NavLink to="/signup" className="nav-link px-2 link-light" id="header-elements">Signup</NavLink></li>
         
       </ul>
 
