@@ -16,15 +16,53 @@ const Signup = () => {
   
   const[Givevalueuser,setGivevalueuser]=useState('');
   const[Givevaluepass,setGivevaluepass]=useState('');
-  const[emailError,emailErrorHandler]=useState('');
-  const[passwordError,passwordErrorHandler]=useState('');
+  const[emailError,setEmailErrorHandler]=useState('');
+  const[passwordError,setPasswordErrorHandler]=useState('');
   const navigateToHome = useNavigate();
   
   const postrequest= async ()=>{
     const post={email:Givevalueuser,password:Givevaluepass};
 
-    return await 
-   axios.post('http://localhost:4000/api/user/signup/',post)
+     try{
+      const responses =await axios.post('http://localhost:4000/api/user/signup/',post)
+      const{data}=responses;
+      const{token}=data;
+      if (token){
+        navigateToHome('/');
+        }
+      }
+      catch(e){
+        const {data}=e.response;
+        const {error:errorhandler}=data;
+        
+        if (errorhandler==="Please fill out all fields."){
+          setEmailErrorHandler(errorhandler);
+          setPasswordErrorHandler(errorhandler)
+          setGivevaluepass("");
+          setGivevalueuser("");
+        };
+        if (errorhandler==="Invalid Email"){
+          setEmailErrorHandler(errorhandler)
+          setPasswordErrorHandler("")
+          
+          setGivevalueuser("");
+
+
+        }
+        if(errorhandler==="The password is not strong enough."){
+          setEmailErrorHandler("")
+          setGivevaluepass("");
+   setGivevaluepass("");
+          setPasswordErrorHandler("The password is not strong enough.")
+          
+        }
+        if (errorhandler==="Email already registered."){
+          setEmailErrorHandler(errorhandler)
+          setPasswordErrorHandler("")
+          setGivevalueuser("")
+        }
+
+      }
  
  
   
@@ -34,46 +72,31 @@ const Signup = () => {
  
   const submithandler=(event)=>{
   event.preventDefault();
+  postrequest();
   
-if(Givevaluepass === ''){
-  passwordErrorHandler('Password is required');
   
-}else{
-  passwordErrorHandler('');
-}
-if(Givevalueuser === ''){
-  emailErrorHandler('Email ID is required');
+
+
+   
   
-}else{
-  emailErrorHandler('');
-}
-   setGivevaluepass("");
-   setGivevalueuser("");
-  console.log(Givevaluepass,Givevalueuser);
-   let signUPDetails= postrequest();
-   signUPDetails.then((response)=>{
-   const {data}=response;
-   const {token}=data;
    
    
-   if (token){
-    navigateToHome('/');
-    }
+   
   
    
 
     
   
-})
-
-  
-
-   console.log("abc",signUPDetails);
-  
-
-  
-  
 }
+
+  
+
+   
+  
+
+  
+  
+
   
   
   
