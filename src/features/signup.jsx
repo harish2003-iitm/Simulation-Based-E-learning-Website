@@ -23,23 +23,11 @@ const Signup = () => {
   const postrequest= async ()=>{
     const post={email:Givevalueuser,password:Givevaluepass};
 
-    return await fetch('http://localhost:4000/api/user/signup/',{method:'POST',body:JSON.stringify(post),headers: {
-      'Content-Type': 'application/json'
+    return await 
+   axios.post('http://localhost:4000/api/user/signup/',post)
+ 
+ 
   
-    },})
-    .then((res)=>{
-      console.log(res)
-        })
-        .catch((e)=>{
-          alert(e)
-          window.location.reload()
-          console.log(e)
-        })
-//     axios.post('http://localhost:4000/api/user/signup/',{
-//       body:post
-//     }
-//       // post
-//   )
 
       
   }
@@ -59,24 +47,19 @@ if(Givevalueuser === ''){
 }else{
   emailErrorHandler('');
 }
-  // setGivevaluepass("");
-  // setGivevalueuser("");
+   setGivevaluepass("");
+   setGivevalueuser("");
   console.log(Givevaluepass,Givevalueuser);
    let signUPDetails= postrequest();
    signUPDetails.then((response)=>{
    const {data}=response;
    const {token}=data;
-   //console.log("durgesh error",error)
+   
+   
    if (token){
     navigateToHome('/');
-   }
-  //  if (token) {
-
-     
-  //    setErrorhandler("Please check the validity of your email and password");
-  //    console.log("abcde",errorhandler);
-
-  //  }
+    }
+  
    
 
     
