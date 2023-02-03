@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Home from './features/home';
 import Login from './features/login';
+import Timer from './component/timer';
 const App=() => {
   return (
     <main className='container-fluid main-css'>
@@ -26,6 +27,7 @@ const App=() => {
 
         </Routes>
       </BrowserRouter>
+      
     </main>
 
 

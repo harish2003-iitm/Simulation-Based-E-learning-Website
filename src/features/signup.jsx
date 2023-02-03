@@ -20,6 +20,7 @@ const Signup = () => {
   const[passwordError,setPasswordErrorHandler]=useState('');
   const navigateToHome = useNavigate();
   
+  
   const postrequest= async ()=>{
     const post={email:Givevalueuser,password:Givevaluepass};
 
@@ -29,7 +30,10 @@ const Signup = () => {
       const{token}=data;
       if (token){
         navigateToHome('/');
+        localStorage.setItem("token",token)
         }
+
+
       }
       catch(e){
         const {data}=e.response;
