@@ -1,19 +1,19 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import {NavLink,Link} from "react-router-dom";
 import Footer from '../component/footer';
 import './signup.css';
 import logo from './edusim-low-resolution-color-logo (1).png';
-
+import { UserContext } from '../App';
 
 
 
 const Signup = () => {
 
   
-  
+  const {state, dispatch} = useContext(UserContext);
   const[Givevalueuser,setGivevalueuser]=useState('');
   const[Givevaluepass,setGivevaluepass]=useState('');
   const[emailError,setEmailErrorHandler]=useState('');
@@ -28,9 +28,10 @@ const Signup = () => {
       const responses =await axios.post('http://localhost:4000/api/user/signup/',post)
       const{data}=responses;
       const{token}=data;
+      localStorage.setItem("token", JSON.stringify(token))
       if (token){
         navigateToHome('/');
-        localStorage.setItem("token",token)
+        dispatch({type:'USER', payload:true})
         }
 
 
