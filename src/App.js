@@ -10,22 +10,25 @@ import "bootstrap/dist/css/bootstrap.css";
 import Home from './features/home';
 import Login from './features/login';
 import Timer from './component/timer';
+import { createContext, useReducer } from "react";
+import { initialState, reducer } from './component/reducer/useReducer';
+export const UserContext = createContext();
 const App=() => {
+  const [state, dispatch] = useReducer(reducer, initialState)
   return (
     <main className='container-fluid main-css'>
       <BrowserRouter>
-
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="*" element={<Error  />} />
-
-
-        </Routes>
+        <UserContext.Provider value={{state, dispatch}}>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<Error  />} />
+          </Routes>
+        </UserContext.Provider>
       </BrowserRouter>
       
     </main>
