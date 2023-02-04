@@ -13,7 +13,8 @@ const Courses = () => {
     <Header/>
     <main className="page">
         <div className='courses'>
-        {localStorage.getItem("token") && true ? <StopWatch/> : "" }
+
+       
         <h1 className='coreact'>Courses Offered</h1>
         
         

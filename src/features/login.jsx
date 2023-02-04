@@ -45,7 +45,7 @@ const Login = () => {
         };
         if (errorhandler==="Invalid login credentials"){
           setEmailErrorHandler(errorhandler)
-          setPasswordErrorHandler("")
+          setPasswordErrorHandler(errorhandler)
           setGivevaluepass("")
           setGivevalueuser("");
 

@@ -6,8 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  bottom: 10px;
+  position:absolute;
+  top: 134px;
   right: 10px;
   border: whitesmoke 2px solid;
   border-radius: 50%;

@@ -12,6 +12,7 @@ import Login from './features/login';
 import Timer from './component/timer';
 import { createContext, useReducer } from "react";
 import { initialState, reducer } from './component/reducer/useReducer';
+import StopWatch from './component/stopwatch';
 export const UserContext = createContext();
 const App=() => {
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -30,6 +31,7 @@ const App=() => {
           </Routes>
         </UserContext.Provider>
       </BrowserRouter>
+      {localStorage.getItem("token") && true ? <StopWatch/> : "" }
       
     </main>
 

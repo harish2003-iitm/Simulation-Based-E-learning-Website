@@ -9,7 +9,7 @@ function StopWatch() {
   const [time, setTime] = useState(0);
   
   useEffect(() => {
-    let interval = null;
+     let interval = null;
   
     if (localStorage.getItem("token") ) {
       interval = setInterval(() => {
@@ -21,7 +21,7 @@ function StopWatch() {
     return () => {
       clearInterval(interval);
     };
-  }, );
+  },[] );
   
   
   
