@@ -22,7 +22,7 @@ const Login = () => {
     const post={email:Givevalueuser,password:Givevaluepass};
 
      try{
-      const responses =await axios.post('http://localhost:4000/api/user/signup/',post)
+      const responses =await axios.post('http://localhost:4000/api/user/login/',post)
       const{data}=responses;
       const{token}=data;
       if (token){
@@ -42,8 +42,8 @@ const Login = () => {
           setGivevaluepass("");
           setGivevalueuser("");
         };
-        if (errorhandler==="Invalid Email"){
-          setEmailErrorHandler(errorhandler)
+        if (errorhandler==="Invalid login credentials"){
+          setEmailErrorHandler()
           setPasswordErrorHandler("")
           
           setGivevalueuser("");
@@ -57,11 +57,7 @@ const Login = () => {
           setPasswordErrorHandler("The password is not strong enough.")
           
         }
-        if (errorhandler==="Email already registered."){
-          setEmailErrorHandler(errorhandler)
-          setPasswordErrorHandler("")
-          setGivevalueuser("")
-        }
+       
 
       }
  
