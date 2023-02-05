@@ -2,9 +2,16 @@
     --bs-alert-padding-x: 0.3rem !important;
     --bs-alert-padding-y: 0.3rem !important;
 }
+.signlog {
+  overflow: hidden;
+  clear: both;
+  background-image: url(https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1039&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .forminp {
   padding: 50px;
-  border: 2px solid white;
+  border: 2px solid transparent;
   width: 500px;
   height: 500px;
   background-image: url(https://cdn1.vogel.de/q9OlbLDPYhYjjrG10U4jrBe9Bqg=/fit-in/1000x0/p7i.vogel.de/wcms/ee/55/ee555de95124d8ee007ab43118af46b4/0106019265.jpeg);
@@ -27,8 +34,11 @@
   font-size: 20px;
 }
 .head-color {
-    margin-bottom: 0.5rem !important;
-    background-color: #1f3e53;
+  margin-bottom: 0rem !important;
+  background-color: #1f3e53;
+}
+.mb-4.border-bottom {
+  margin-bottom: 0rem !important;
 }
 .User-red {
   color: beige;

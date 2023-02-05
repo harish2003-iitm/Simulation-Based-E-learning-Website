@@ -133,12 +133,13 @@ const Signup = () => {
         <li><NavLink to="/" className="nav-link px-2 link-light" id="header-elements">Home</NavLink></li>
         <li><NavLink to="/about" className="nav-link px-2 link-light" id="header-elements">About</NavLink></li>
         <li><NavLink to="/contact" className="nav-link px-2 link-light" id="header-elements">Contact</NavLink></li>
-        <li><NavLink to="/signup" className="nav-link px-2 link-light" id="header-elements">Signup</NavLink></li>
+        <li><NavLink to="/login" className="nav-link px-2 link-light" id="header-elements">Login</NavLink></li>
         
       </ul>
 
       
     </header>
+    <div className='signlog'>
     <main className="page">
       <div className='divStyle1'>
       <form className='forminp' onSubmit={submithandler} >
@@ -160,6 +161,7 @@ const Signup = () => {
       </form>
       </div>
     </main>
+    </div>
     <Footer/>
     
     </>

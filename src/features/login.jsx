@@ -116,6 +116,7 @@ const Login = () => {
 
       
     </header>
+    <div className='signlog'>
     <main className="page">
       <div className='divStyle1'>
       <form className='forminp' onSubmit={submithandler} >
@@ -137,6 +138,7 @@ const Login = () => {
       </form>
       </div>
     </main>
+    </div>
     <Footer/>
     
     
